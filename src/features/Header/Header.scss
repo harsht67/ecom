@@ -1,0 +1,28 @@
+.header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .menuIcon {
+        width: 1.5rem;
+    }
+
+    .logo {
+        flex: 1;
+
+        img {
+            width: 9rem;
+        }
+
+    }
+
+    .cart {
+        width: 1rem;
+    }
+
+    .avatar {
+        width: 2rem;
+    }
+
+}

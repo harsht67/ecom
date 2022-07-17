@@ -1,0 +1,57 @@
+.productPage {
+
+    > *:not(:first-child) {
+        padding: 1rem;
+    }
+
+    .productPage__desc {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        h1 {
+            text-transform: capitalize;
+        }
+
+        p {
+            line-height: 1.5em;
+        }
+    
+    }
+
+    .productPage__price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .discount {
+            padding: 0.5em;
+            border-radius: 0.5rem;
+            background-color: #00000040;
+        }
+
+        .mrp {
+            text-decoration: line-through;
+        }
+
+    }   
+
+    .productPage__btns {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+    }
+
+}

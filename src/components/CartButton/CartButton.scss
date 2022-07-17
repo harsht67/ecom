@@ -1,0 +1,16 @@
+button {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    background-color: teal;
+    color: #fff;
+}
