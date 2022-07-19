@@ -1,0 +1,38 @@
+@use '../../scss' as *;
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-block-end: 1rem;
+
+    .cartItem__img {
+        width: 2.75rem;
+        border-radius: 0.25rem;
+    }
+
+    .cartItem__desc {
+        flex: 1;
+        font-size: 0.85em;
+        display: flex;
+        flex-flow: column;
+        gap: 0.25rem;
+        color: $grey;
+
+        >*:first-child {
+            text-transform: capitalize;
+        }
+
+        .imp {
+            font-weight: 700;
+            color: #000;
+        }
+
+    }
+
+    .cartItem__deleteBtn {
+        width: 0.85em;
+        cursor: pointer;
+    }
+
+}

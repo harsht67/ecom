@@ -1,6 +1,7 @@
 import './Header.scss'
 import { icons, images } from '../../constants'
 import { NavList } from '../../components'
+import Cart from '../Cart/Cart'
 
 import { useState } from 'react'
 
@@ -8,8 +9,15 @@ function Header() {
 
     const [menu, SetMenu] = useState(100)
 
+    const [cart, setCart] = useState(false)
+
     const toggleMenu = () => {
+        setCart(false)
         SetMenu(prev => prev==100?0:100)
+    }
+
+    const toggleCart = () => {
+        setCart(prev => !prev)
     }
 
     return (
@@ -64,7 +72,10 @@ function Header() {
                 className="cartIcon"
                 src={icons.cart}
                 alt='cart icon'
+                onClick={toggleCart}
             />
+
+            { cart && <Cart/> }
 
             <img 
                 className="avatar"

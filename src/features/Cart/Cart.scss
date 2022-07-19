@@ -1,0 +1,39 @@
+@use '../../scss' as *;
+
+.cart {
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 1px 1px 25px rgba(#000, 0.3);
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 3.75rem;
+    left: 0.5rem;
+    right: 0.5rem;
+
+    @include mq(lg) {
+        right: 8rem;
+        left: initial;
+        min-width: 300px;
+    }
+
+    .cart__header {
+        padding: 1rem;
+        border-block-end: 1px solid $grey3;
+    }
+
+    .cart__content {
+        padding: 1rem;
+
+        .cart__empty {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $grey;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+
+    }
+
+}

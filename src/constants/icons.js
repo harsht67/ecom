@@ -7,6 +7,7 @@ import previous from '../assets/icon-previous.svg'
 import plus from '../assets/icon-plus.svg'
 import minus from '../assets/icon-minus.svg'
 import close from '../assets/icon-close.svg'
+import del from '../assets/icon-delete.svg'
 
 export default {
     cart,
@@ -17,5 +18,6 @@ export default {
     previous,
     plus,
     minus,
-    close
+    close,
+    del
 }

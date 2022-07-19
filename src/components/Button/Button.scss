@@ -4,16 +4,16 @@ button {
     padding: 1rem;
     border: none;
     outline: none;
-    font-size: inherit;
     border-radius: 0.5rem;
     width: 100%;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
     cursor: pointer;
     background-color: $orange;
     color: #fff;
-    box-shadow: 0 5px 20px rgba($orange, 0.5);
+    transition: all 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
 }

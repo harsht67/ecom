@@ -1,5 +1,7 @@
 import './ProductPage.scss'
-import { CartButton, ImageGallery, ImageGalleryBig, QtyInput, Lightbox } from '../../components'
+import { Button, ImageGallery, ImageGalleryBig, QtyInput, Lightbox } from '../../components'
+import { icons } from '../../constants'
+
 import { useState } from 'react'
 
 function ProductPage() {
@@ -69,7 +71,16 @@ function ProductPage() {
 
                     <QtyInput/>
 
-                    <CartButton/>
+                    <Button>
+
+                        <img
+                            src={icons.cart2}
+                            alt="cart icon"
+                        />
+
+                        Add to cart
+                        
+                    </Button>
 
                 </section>
             
