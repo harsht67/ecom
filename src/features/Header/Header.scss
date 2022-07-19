@@ -1,12 +1,13 @@
 @use '../../scss' as *;
 
 .header {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
 
-    @include mq(lg) {
+    @include mq(lg) {   
+        padding: 0 1rem;
         margin: 0 7.5rem;
         gap: 2rem;
         border-block-end: 1px solid $grey3;
@@ -82,10 +83,35 @@
                 padding: 0;
 
                 li {
+                    position: relative;
                     display: inline-block;
                     margin-inline-end: 2rem;
+                    padding-block: 1.5rem;
                     text-transform: capitalize;   
-                    color: $grey;                 
+                    color: $grey;             
+                    transition: all 0.25s;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: $orange;
+                        transition: width 0.15s linear;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #000;
+
+                        &::after {
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
+
                 }
             }
         }
@@ -96,7 +122,20 @@
     }
 
     .avatar {
-        width: 2rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: all 0.25s;
+
+        @include mq(lg) {
+            width: 2.5rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border-color: $orange;
+        }
+
     }
 
 }

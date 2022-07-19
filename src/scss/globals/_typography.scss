@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .f1 {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
 
     @include mq(xl) {
         font-size: 2rem;
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 0.9rem;
 
     @include mq(xl) {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
 }
