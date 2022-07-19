@@ -25,20 +25,24 @@ function Header() {
                     onClick={toggleMenu}
                 />
             
-                <nav 
+                <div 
                     className="menu__content"
                     style={{transform: `translateX(${-menu}%)`}}
                 >
 
-                    <img
-                        src={icons.close}
-                        alt="close icon"
-                        onClick={toggleMenu}
-                    />
+                    <nav>
 
-                    <NavList/>
+                        <img
+                            src={icons.close}
+                            alt="close icon"
+                            onClick={toggleMenu}
+                        />
+
+                        <NavList/>
+                    
+                    </nav>
                 
-                </nav>
+                </div>
 
             </section>
 

@@ -1,3 +1,5 @@
+@use '../../scss' as *;
+
 button {
     padding: 1rem;
     border: none;
@@ -5,12 +7,13 @@ button {
     font-size: inherit;
     border-radius: 0.5rem;
     width: 100%;
-    font-weight: 500;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     cursor: pointer;
-    background-color: teal;
+    background-color: $orange;
     color: #fff;
+    box-shadow: 0 5px 20px rgba($orange, 0.5);
 }

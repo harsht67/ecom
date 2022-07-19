@@ -1,3 +1,5 @@
+@use '../../scss' as *;
+
 .qtyInput {
     position: relative;
     border-radius: 0.5rem;
@@ -21,14 +23,15 @@
     }
 
     input {
-        background-color: grey;
+        background-color: $grey3;
         outline: none;
         border: none;
         padding: 1rem;
         width: 100%;
         text-align: center;
-        color: #fff;
+        color: #000;
         font-size: inherit;
+        font-weight: 600;
 
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
