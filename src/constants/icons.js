@@ -1,4 +1,5 @@
 import cart from '../assets/icon-cart.svg'
+import cart2 from '../assets/icon-cart2.svg'
 import menu from '../assets/icon-menu.svg'
 import logo from '../assets/logo.svg'
 import next from '../assets/icon-next.svg'
@@ -9,6 +10,7 @@ import close from '../assets/icon-close.svg'
 
 export default {
     cart,
+    cart2,
     menu,
     logo,
     next,

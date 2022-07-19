@@ -5,10 +5,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .f1 {
-    font-size: 2.25rem;
+    font-size: 1.9rem;
 
     @include mq(xl) {
-        font-size: 2.35rem;
+        font-size: 2rem;
     }
 }
 
@@ -21,10 +21,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .txt {
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     @include mq(xl) {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
 }

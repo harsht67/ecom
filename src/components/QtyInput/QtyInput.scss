@@ -4,14 +4,22 @@
     position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
+    min-width: 10rem;
 
     .qtyInput__btn {
+        padding: 0.5rem 0.75rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
-        width: 1rem;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 1rem;
+        }
+
     }
 
     .btn__minus {

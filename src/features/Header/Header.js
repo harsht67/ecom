@@ -15,7 +15,6 @@ function Header() {
     return (
         <header className="header">
 
-
             <section className="menu">
 
                 <img 
@@ -55,8 +54,10 @@ function Header() {
 
             </div>
 
-            <nav className="nav">
+            <nav className="nav txt">
+
                 <NavList/>
+            
             </nav>
 
             <img

@@ -17,12 +17,15 @@ function QtyInput() {
     return (
         <div className="qtyInput">
 
-            <img
+            <div
                 className="qtyInput__btn btn__minus"
-                src={icons.minus}
-                alt="minus btn"
                 onClick={() => qty>0 && setQty(prev=>prev-1)}
-            />
+            >
+                <img
+                    src={icons.minus}
+                    alt="minus btn"
+                />
+            </div>
 
             <input
                 value={qty}
@@ -30,13 +33,15 @@ function QtyInput() {
                 onChange={changeHandler}
             />
 
-            <img 
+            <div
                 className="qtyInput__btn btn__plus"
-                src={icons.plus}
-                alt="plus btn"
                 onClick={() => setQty(prev=>prev+1)}
-            />
-
+            >
+                <img 
+                    src={icons.plus}
+                    alt="plus btn"
+                />
+            </div>
 
         </div>
     )

@@ -7,6 +7,7 @@ function NavList() {
             <li>men</li>
             <li>women</li>
             <li>about</li>
+            <li>contact</li>
         </ul>
     )
 }

@@ -1,7 +1,14 @@
 import './ProductPage.scss'
-import { CartButton, ImageGallery, ImageGalleryBig, QtyInput } from '../../components'
+import { CartButton, ImageGallery, ImageGalleryBig, QtyInput, Lightbox } from '../../components'
+import { useState } from 'react'
 
 function ProductPage() {
+
+    const [lightbox, setLightbox] = useState(false)
+
+    const toggleLightbox = () => {
+        setLightbox(prev => !prev)
+    }
     
     return (
         <div className="productPage">
@@ -10,7 +17,12 @@ function ProductPage() {
 
                 <ImageGallery/>
 
-                <ImageGalleryBig/>                
+                <ImageGalleryBig 
+                    toggleLightbox={toggleLightbox} 
+                    lightbox={lightbox}
+                />               
+
+                { lightbox && <Lightbox toggleLightbox={toggleLightbox} /> } 
 
             </div>
 

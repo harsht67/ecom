@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const imgs = ['p1_t', 'p2_t', 'p3_t', 'p4_t']
 
-function ImageGalleryBig() {
+function ImageGalleryBig(props) {
 
     const [focusImg, setFocusImg] = useState('p1')
 
@@ -22,6 +22,7 @@ function ImageGalleryBig() {
                 className="focusImg"
                 src={images[focusImg]}
                 alt="product image"
+                onClick={()=>!props.lightbox&&props.toggleLightbox()}
             />
 
             <section className="thumbnail">

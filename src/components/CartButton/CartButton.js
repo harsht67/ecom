@@ -6,7 +6,7 @@ function CartButton() {
         <button>
 
             <img 
-                src={icons.cart}
+                src={icons.cart2}
                 alt="cart icon"
             />
 
