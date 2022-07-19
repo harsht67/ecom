@@ -1,0 +1,29 @@
+.imageGalleryBig {
+
+    .focusImg {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 1rem;
+        margin-block-end: 2rem;
+    }
+
+    .thumbnail {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            border-radius: 0.5rem;
+            border: 2.5px solid transparent;
+            width: 6.25rem;
+            cursor: pointer;
+        }
+
+        .focus--img {
+            border: 2.5px solid orange;
+            opacity: 0.85;
+        }
+
+    }
+
+}

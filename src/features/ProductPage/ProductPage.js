@@ -1,61 +1,67 @@
 import './ProductPage.scss'
-import { CartButton, ImageGallery, QtyInput } from '../../components'
+import { CartButton, ImageGallery, ImageGalleryBig, QtyInput } from '../../components'
 
 function ProductPage() {
     
     return (
         <div className="productPage">
 
-            <ImageGallery/>
+            <div className="productPage__col1">
 
-            <section className="productPage__desc">
+                <ImageGallery/>
 
-                <h2 className="f5">
-                    sneaker company
-                </h2>
+                <ImageGalleryBig/>                
 
-                <h1 className="f1">
-                    fall limited edition sneakers
-                </h1>
+            </div>
 
-                <p className="txt">
-                    These low-profile sneakers are your perfect casual wear companion.
-                    Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
-                </p>
+            <div className="productPage__col2">
 
-            </section>
+                <section className="productPage__desc">
 
+                    <h2 className="txt">
+                        sneaker company
+                    </h2>
 
-            <section className="productPage__price">
+                    <h1 className="f1">
+                        fall limited edition sneakers
+                    </h1>
 
-                <div>
+                    <p className="txt">
+                        These low-profile sneakers are your perfect casual wear companion.
+                        Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+                    </p>
 
-                    <span className="price f1">
-                        $125.00
+                </section>
+
+                <section className="productPage__price">
+
+                    <div>
+
+                        <span className="price f1">
+                            $125.00
+                        </span>
+
+                        <span className="discount">
+                            50%
+                        </span>
+
+                    </div>
+
+                    <span className="mrp f5">
+                        $250.00
                     </span>
 
-                    <span className="discount">
-                        50%
-                    </span>
+                </section>
 
-                </div>
+                <section className="productPage__btns">
 
-                <span className="mrp f5">
-                    $250.00
-                </span>
+                    <QtyInput/>
 
-            </section>
+                    <CartButton/>
 
-            <section className="productPage__btns">
-
-                <QtyInput/>
-
-                <CartButton/>
-
-            </section>
+                </section>
             
-
-
+            </div>
 
         </div>
     )

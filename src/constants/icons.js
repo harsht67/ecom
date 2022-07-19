@@ -5,6 +5,7 @@ import next from '../assets/icon-next.svg'
 import previous from '../assets/icon-previous.svg'
 import plus from '../assets/icon-plus.svg'
 import minus from '../assets/icon-minus.svg'
+import close from '../assets/icon-close.svg'
 
 export default {
     cart,
@@ -13,5 +14,6 @@ export default {
     next,
     previous,
     plus,
-    minus
+    minus,
+    close
 }
