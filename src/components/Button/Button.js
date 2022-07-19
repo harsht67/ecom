@@ -2,7 +2,7 @@ import './Button.scss'
 
 function Button(props) {
     return (
-        <button>
+        <button {...props} >
 
             {props.children}
 

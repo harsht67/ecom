@@ -1,17 +1,42 @@
 import './ProductPage.scss'
 import { Button, ImageGallery, ImageGalleryBig, QtyInput, Lightbox } from '../../components'
 import { icons } from '../../constants'
+import { CartContext } from '../../Context'
 
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 function ProductPage() {
 
+    const cart = useContext(CartContext)
+
+    const [qty, setQty] = useState(0)
+
     const [lightbox, setLightbox] = useState(false)
 
+    // updates quantity 
+    const changeQty = (qty) => {
+        setQty(qty)
+    }
+
+    // open/close - lightbox
     const toggleLightbox = () => {
         setLightbox(prev => !prev)
     }
-    
+
+    const addToCart = () => {
+        qty>0 &&
+            cart.dispatch({
+                type: 'addItem',
+                payload: {
+                    id: 1,
+                    img: 'p1',
+                    name: 'fall limited edition sneakers',
+                    price: 125,
+                    qty,
+                }
+            })
+    }
+
     return (
         <div className="productPage">
 
@@ -69,9 +94,12 @@ function ProductPage() {
 
                 <section className="productPage__btns">
 
-                    <QtyInput/>
+                    <QtyInput
+                        qty={qty}
+                        changeQty={changeQty}
+                    />
 
-                    <Button>
+                    <Button onClick={addToCart} >
 
                         <img
                             src={icons.cart2}

@@ -1,9 +1,21 @@
 import './CartItem.scss'
 import { icons, images } from '../../constants'
+import { CartContext } from '../../Context'
+
+import { useContext } from 'react'
 
 function CartItem(props) {
 
-    const { img, name, price, qty } = props.data
+    const dispatch = useContext(CartContext).dispatch
+
+    const removeItem = () => {
+        dispatch({
+            type: 'removeItem',
+            payload: id
+        })
+    }
+
+    const { id, img, name, price, qty } = props.data
 
     return (
         <div className="cartItem">
@@ -30,6 +42,7 @@ function CartItem(props) {
                 className="cartItem__deleteBtn"
                 src={icons.del}
                 alt="delete icon"
+                onClick={removeItem}
             />
 
         </div>

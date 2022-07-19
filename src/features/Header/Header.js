@@ -2,10 +2,15 @@ import './Header.scss'
 import { icons, images } from '../../constants'
 import { NavList } from '../../components'
 import Cart from '../Cart/Cart'
+import { CartContext } from '../../Context'
 
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 function Header() {
+
+    const cartState = useContext(CartContext).state
+    // number of items in cart
+    const cartQty = Object.values(cartState).map(item => item.qty).reduce((prev, curr) => prev+curr, 0)
 
     const [menu, SetMenu] = useState(100)
 
@@ -68,12 +73,21 @@ function Header() {
             
             </nav>
 
-            <img
-                className="cartIcon"
-                src={icons.cart}
-                alt='cart icon'
-                onClick={toggleCart}
-            />
+            <div className="cartIcon">
+
+                <img
+                    src={icons.cart}
+                    alt='cart icon'
+                    onClick={toggleCart}
+                />
+
+                { cartQty>0 &&
+                    <span className="cartQty">
+                        {cartQty}
+                    </span>
+                }
+            
+            </div>
 
             { cart && <Cart/> }
 

@@ -1,14 +1,18 @@
 import './App.scss'
 import { Header, ProductPage } from './features'
+import CartContextProvider from './Context'
 
 function App() {
+
   return (
     <div>
+      <CartContextProvider>
       
-      <Header/>
+        <Header/>
 
-      <ProductPage/>
+        <ProductPage/>
 
+      </CartContextProvider>
     </div>
   )
 }

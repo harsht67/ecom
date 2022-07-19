@@ -2,17 +2,13 @@ import './Cart.scss'
 import { iamges, images } from '../../constants'
 import CartItem from './CartItem'
 import { Button } from '../../components'
+import { CartContext } from '../../Context'
+
+import { useContext } from 'react'
 
 function Cart() {
 
-    const cart = [
-        {
-            img: 'p1',
-            name: 'fall limited edition sneakers',
-            price: 125,
-            qty: 3,
-        },
-    ]
+    const cart = Object.values(useContext(CartContext).state)
 
     return (
         <article className="cart">
