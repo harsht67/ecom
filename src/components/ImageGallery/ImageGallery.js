@@ -25,25 +25,13 @@ function ImageGallery() {
         <article className="imageGallery">
 
             <div 
-                className="imageGallery__btn left--btn"
+                className={`imageGallery__btn left--btn ${x==0 && 'disabled--btn'}`}
                 onClick={moveLeft}
             >
 
                 <img 
                     src={icons.previous}
                     alt="left arrow"
-                />
-
-            </div>
-
-            <div 
-                className="imageGallery__btn right--btn"
-                onClick={moveRight}
-            >
-
-                <img
-                    src={icons.next}
-                    alt="right arrow"
                 />
 
             </div>
@@ -61,6 +49,18 @@ function ImageGallery() {
                     />
                 ))}
             
+            </div>
+
+            <div 
+                className={`imageGallery__btn right--btn ${x==(imgs.length-1)*100 && 'disabled--btn'} `}
+                onClick={moveRight}
+            >
+
+                <img
+                    src={icons.next}
+                    alt="right arrow"
+                />
+
             </div>
 
         </article>

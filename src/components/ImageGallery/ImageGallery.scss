@@ -31,6 +31,11 @@
         right: 1rem;
     }
 
+    .disabled--btn {
+        opacity: 0.8;
+        cursor: initial;
+    }
+
     .imageGallery__container {
         display: flex;
         transition: all 0.5s;

@@ -6,12 +6,12 @@ import { CartContext } from '../../Context'
 
 import { useContext } from 'react'
 
-function Cart() {
+function Cart(props) {
 
     const cart = Object.values(useContext(CartContext).state)
 
     return (
-        <article className="cart">
+        <article className="cart" {...props} >
 
             <header className="cart__header">
 

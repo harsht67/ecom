@@ -12,13 +12,13 @@ function Header() {
     // number of items in cart
     const cartQty = Object.values(cartState).map(item => item.qty).reduce((prev, curr) => prev+curr, 0)
 
-    const [menu, SetMenu] = useState(100)
+    const [menu, SetMenu] = useState(false)
 
     const [cart, setCart] = useState(false)
 
     const toggleMenu = () => {
         setCart(false)
-        SetMenu(prev => prev==100?0:100)
+        SetMenu(prev => !prev)
     }
 
     const toggleCart = () => {
@@ -37,10 +37,7 @@ function Header() {
                     onClick={toggleMenu}
                 />
             
-                <div 
-                    className="menu__content"
-                    style={{transform: `translateX(${-menu}%)`}}
-                >
+                <div className={`menu__content ${menu && 'menu__open'} `}>
 
                     <nav>
 
