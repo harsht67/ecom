@@ -66,11 +66,16 @@
         flex: 1;
 
         img {
-            width: 9rem;
+            width: 10rem;
         }
 
         @include mq(lg) {
             flex: initial;
+
+            IMG {
+                width: 12rem;
+            }
+
         }
 
     }
@@ -92,7 +97,7 @@
                     position: relative;
                     display: inline-block;
                     margin-inline-end: 2rem;
-                    padding-block: 1.5rem;
+                    padding-block: 2rem;
                     text-transform: capitalize;   
                     color: $grey;             
                     transition: all 0.25s;
@@ -129,7 +134,7 @@
         padding-block-start: 0.5rem;
 
         img {
-            width: 1.25rem;
+            width: 1.5rem;
         }
 
         .cartQty {
@@ -147,13 +152,13 @@
     }
 
     .avatar {
-        width: 2.25rem;
+        width: 2.5rem;
         border-radius: 50%;
         border: 2px solid transparent;
         transition: all 0.25s;
 
         @include mq(lg) {
-            width: 2.5rem;
+            width: 2.75rem;
         }
 
         &:hover {

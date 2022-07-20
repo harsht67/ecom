@@ -38,7 +38,7 @@ function ProductPage() {
     }
 
     return (
-        <div className="productPage">
+        <article className="productPage">
 
             <div className="productPage__col1">
 
@@ -114,7 +114,7 @@ function ProductPage() {
             
             </div>
 
-        </div>
+        </article>
     )
 }
 

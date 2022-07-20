@@ -36,7 +36,7 @@
         padding: 2rem 1rem;
         display: flex;
         flex-flow: column;
-        gap: 2rem;
+        gap: 2.5rem;
 
         @include mq(md) {
             padding: 2rem;
@@ -65,7 +65,7 @@
         }
 
         p {
-            line-height: 1.6em;
+            line-height: 1.5em;
             color: $grey;
 
             @include mq(md) {
@@ -116,7 +116,7 @@
     .productPage__btns {
         display: flex;
         flex-flow: column;
-        gap: 2rem;
+        gap: 1rem;
 
         .button {
             display: flex;

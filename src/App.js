@@ -10,7 +10,11 @@ function App() {
       
         <Header/>
 
-        <ProductPage/>
+        <main>
+  
+          <ProductPage/>
+  
+        </main>
 
       </CartContextProvider>
     </div>
