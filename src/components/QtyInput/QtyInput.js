@@ -1,6 +1,5 @@
 import './QtyInput.scss'
 import { icons } from '../../constants'
-import { useState } from 'react';
 
 function QtyInput({qty, ...props}) {
 
@@ -13,7 +12,7 @@ function QtyInput({qty, ...props}) {
     return (
         <div className="qtyInput">
 
-            <div
+            <button
                 className="qtyInput__btn btn__minus"
                 onClick={() => qty>0 && props.changeQty(prev=>prev-1)}
             >
@@ -21,7 +20,7 @@ function QtyInput({qty, ...props}) {
                     src={icons.minus}
                     alt="minus btn"
                 />
-            </div>
+            </button>
 
             <input
                 value={qty}
@@ -29,7 +28,7 @@ function QtyInput({qty, ...props}) {
                 onChange={changeHandler}
             />
 
-            <div
+            <button
                 className="qtyInput__btn btn__plus"
                 onClick={() => props.changeQty(prev=>prev+1)}
             >
@@ -37,7 +36,7 @@ function QtyInput({qty, ...props}) {
                     src={icons.plus}
                     alt="plus btn"
                 />
-            </div>
+            </button>
 
         </div>
     )

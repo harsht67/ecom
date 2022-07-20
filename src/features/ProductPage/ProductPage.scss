@@ -53,14 +53,14 @@
         flex-flow: column;
         gap: 1rem;
 
-        h2 {
+        h1 {
             text-transform: uppercase;
             letter-spacing: 0.075em;
             color: $orange;
             font-weight: 700;
         }
 
-        h1 {
+        h2 {
             text-transform: capitalize;
         }
 
@@ -118,7 +118,7 @@
         flex-flow: column;
         gap: 2rem;
 
-        button {
+        .button {
             display: flex;
             align-items: center;
             justify-content: center;

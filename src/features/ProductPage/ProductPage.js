@@ -57,13 +57,13 @@ function ProductPage() {
 
                 <section className="productPage__desc">
 
-                    <h2 className="txt">
+                    <h1 className="txt">
                         sneaker company
-                    </h2>
-
-                    <h1 className="f1">
-                        fall limited edition sneakers
                     </h1>
+
+                    <h2 className="f1">
+                        fall limited edition sneakers
+                    </h2>
 
                     <p className="txt">
                         These low-profile sneakers are your perfect casual wear companion.
@@ -86,9 +86,9 @@ function ProductPage() {
 
                     </div>
 
-                    <span className="mrp f5">
+                    <div className="mrp f5">
                         $250.00
-                    </span>
+                    </div>
 
                 </section>
 

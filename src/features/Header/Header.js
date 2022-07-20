@@ -37,9 +37,9 @@ function Header() {
                     onClick={toggleMenu}
                 />
             
-                <div className={`menu__content ${menu && 'menu__open'} `}>
+                <nav className={`menu__content ${menu && 'menu__open'} `}>
 
-                    <nav>
+                    <div>
 
                         <img
                             src={icons.close}
@@ -49,20 +49,20 @@ function Header() {
 
                         <NavList/>
                     
-                    </nav>
+                    </div>
                 
-                </div>
+                </nav>
 
             </section>
 
-            <div className="logo">
+            <section className="logo">
                 
                 <img 
                     src={icons.logo}
                     alt='logo'
                 />
 
-            </div>
+            </section>
 
             <nav className="nav txt">
 
@@ -70,7 +70,7 @@ function Header() {
             
             </nav>
 
-            <div className="cartIcon">
+            <section className="cartIcon">
 
                 <img
                     src={icons.cart}
@@ -84,7 +84,7 @@ function Header() {
                     </span>
                 }
             
-            </div>
+            </section>
 
             { cart && <Cart/> }
 

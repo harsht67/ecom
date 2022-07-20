@@ -24,7 +24,7 @@ function ImageGallery() {
     return (
         <article className="imageGallery">
 
-            <div 
+            <button 
                 className={`imageGallery__btn left--btn ${x==0 && 'disabled--btn'}`}
                 onClick={moveLeft}
             >
@@ -34,9 +34,9 @@ function ImageGallery() {
                     alt="left arrow"
                 />
 
-            </div>
+            </button>
 
-            <div 
+            <section
                 className="imageGallery__container"
                 style={{transform: `translateX(${-x}%)`}}
             >
@@ -49,9 +49,9 @@ function ImageGallery() {
                     />
                 ))}
             
-            </div>
+            </section>
 
-            <div 
+            <button 
                 className={`imageGallery__btn right--btn ${x==(imgs.length-1)*100 && 'disabled--btn'} `}
                 onClick={moveRight}
             >
@@ -61,7 +61,7 @@ function ImageGallery() {
                     alt="right arrow"
                 />
 
-            </div>
+            </button>
 
         </article>
     )

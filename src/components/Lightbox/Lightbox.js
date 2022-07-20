@@ -9,7 +9,7 @@ function Lightbox(props) {
 
             <div className="lightbox__container">
 
-                <div className="lightbox__header">
+                <header className="lightbox__header">
 
                     <img
                         src={icons.close}
@@ -17,7 +17,7 @@ function Lightbox(props) {
                         onClick={()=>props.toggleLightbox()}
                     />
 
-                </div>
+                </header>
 
                 <ImageGalleryBig/>
 

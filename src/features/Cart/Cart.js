@@ -28,21 +28,21 @@ function Cart(props) {
 
                     ? <div className="cart__empty">
 
-                        <span>
+                        <p>
                             Your cart is empty.
-                        </span>
+                        </p>
                       
                       </div>
 
-                    : <div>
+                    : <>
 
-                        { cart.map(item => <CartItem data={item} />) }
+                        { cart.map(item => <CartItem key={item.id} data={item} />) }
 
                         <Button>
                             Checkout
                         </Button>
 
-                      </div>
+                      </>
 
                 }
 

@@ -18,7 +18,7 @@ function CartItem(props) {
     const { id, img, name, price, qty } = props.data
 
     return (
-        <div className="cartItem">
+        <article className="cartItem">
 
             <img
                 className="cartItem__img"
@@ -26,7 +26,7 @@ function CartItem(props) {
                 alt="product image"
             />
 
-            <div className="cartItem__desc">
+            <section className="cartItem__desc">
 
                 <p>
                     {name}
@@ -36,7 +36,7 @@ function CartItem(props) {
                     ${price.toFixed(2)} x {qty} <span className="imp">${(price*qty).toFixed(2)}</span>
                 </p>
             
-            </div>
+            </section>
 
             <img
                 className="cartItem__deleteBtn"
@@ -45,7 +45,7 @@ function CartItem(props) {
                 onClick={removeItem}
             />
 
-        </div>
+        </article>
     )
 }
 
